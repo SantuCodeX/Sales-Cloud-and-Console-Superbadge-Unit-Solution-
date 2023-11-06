@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Review_Date</fullName>
+    <active>true</active>
+    <description>Review Date cannot be scheduled before the current date.</description>
+    <errorConditionFormula>Review_Date__c &lt; TODAY() &amp;&amp; ISNEW()</errorConditionFormula>
+    <errorMessage>The Review Date has to be a future value</errorMessage>
+</ValidationRule>
